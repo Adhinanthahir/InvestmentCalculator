@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottonsheetContainer"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bottomsheetbck"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:gravity="center"
+        android:textSize="19dp"
+        android:textColor="#EF6C00"
+        android:textStyle="bold"
+        android:text=" \nYEAR        AND        MONTH\n "
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/numberPickerYear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:np_width="80dp"
+            android:background="@drawable/back_grpage"
+            app:np_height="180dp"
+            app:np_dividerColor="#A2A6C0"
+            app:np_selectedTextColor="#9F2600"
+            app:np_selectedTextSize="27dp"
+            app:np_textColor="@color/black"
+            app:np_textSize="25dp"
+            android:layout_weight="1" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/numberPickerMonth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:np_width="80dp"
+            android:background="@drawable/back_grpage"
+            app:np_height="180dp"
+            app:np_dividerColor="#A2A6C0"
+            app:np_selectedTextColor="#77036D"
+            app:np_selectedTextSize="27dp"
+            app:np_textColor="@color/black"
+            app:np_textSize="25dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop= "25dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#807A7A"
+            android:background="@drawable/cancel_btn"
+            android:text="Cancel"
+            />
+        <Button
+            android:id="@+id/OK"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/save_btn"
+            android:text="OK"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_grpage"
+    tools:context=".Investment">
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+    <LinearLayout
+        android:id="@+id/mode"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/investtoolbar"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/one_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#7B260B"
+            android:textSize="18dp"
+            android:text="One Time"/>
+        <Switch
+            android:id="@+id/switchButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:textOff="One Time"
+            android:textOn="Recurring"
+            android:thumbTint="@drawable/switch_log"
+            android:trackTint="@drawable/switch_log"/>
+
+        <TextView
+            android:id="@+id/recuri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:text="Recurring"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+    <LinearLayout
+        android:id="@+id/actu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentEnd="true"
+android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:textColor="#942D0D"
+            android:text="Intial Amount :"/>
+
+        <EditText
+            android:id="@+id/editTextNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:ems="12"
+            android:gravity="center"
+            android:hint=""
+            android:inputType="number|numberDecimal"
+            android:padding="10dp"
+            android:textColor="#A36100"
+            android:textColorHint="#000000"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/btnLa"
+        android:layout_width="match_parent"
+
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/actu"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/durations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textColor="#8E5205"
+            android:textSize="14dp"
+            android:text="Duration : " />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:layout_toLeftOf="@+id/invest_rate"
+            android:textColor="#942D0D"
+            android:text="Rate (%)  :      "/>
+        <EditText
+            android:id="@+id/invest_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+            android:ems="4"
+            android:gravity="center"
+            android:text="18"
+            android:maxLength="5"
+            android:inputType="number|numberDecimal"
+            android:padding="10dp"
+            android:textColor="#A36100"
+            android:textColorHint="#000000"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/final1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnLa"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="16dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="#942D0D"-->
+<!--            android:text="Total price :      "/>-->
+
+        <EditText
+            android:id="@+id/editTextNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:ems="12"
+            android:gravity="center"
+            android:hint="Investment Amount"
+            android:inputType="number|numberDecimal"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="#B73006"
+            android:lineBreakStyle="none"
+            android:textColorHint="#A55F06"
+            android:textSize="25dp" />
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/final1"
+        android:visibility="invisible"
+        android:src="@drawable/baseline_autorenew_24"/>
+
+    <TextView
+        android:id="@+id/gst12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/final1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textColor="#613936"
+        android:textSize="18dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gst12"
+
+        android:layout_marginHorizontal="25dp">
+
+        <View
+            android:id="@+id/intialLine"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@color/intialvalcol"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/intersetLine" />
+
+        <View
+            android:id="@+id/intersetLine"
+            android:layout_width="150dp"
+            android:layout_height="5dp"
+            android:background="@color/interest_col"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/intialLine"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/values"
+        android:layout_below="@+id/lines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/intial_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="8dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="left"
+            android:ems="12"
+            android:padding="10dp"
+            android:text="Intial Amount :"
+            android:textColor="@color/intialvalcol"
+            />
+        <TextView
+            android:id="@+id/interest_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:ems="9"
+            android:textColor="@color/interest_col"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="8dp"
+            android:text="interest :"/>
+    </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:layout_marginVertical="15dp"
+                android:text="Report"
+                android:visibility="gone"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_invest"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:visibility="gone"
+                />
+            <ImageView
+                android:id="@+id/promoid"
+                android:layout_width="288dp"
+                android:layout_height="88dp"
+                android:layout_below="@id/gst12"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/promoat4" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
